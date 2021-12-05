@@ -1,0 +1,106 @@
+:root {
+  --wine-red: #c7375f;
+  --bright-red: #d42d2f;
+  --dark-green: #344d2f;
+  --light-green: #77a047;
+  --gold: #fac57d;
+  --snow: #f0f4f7;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: var(--snow);
+  background: url(img/gift.jpg);
+  background-size: cover;
+  font-family: "Mountains of Christmas", cursive;
+}
+
+.main-header {
+  text-shadow: 2px 2px 10px var(--snow);
+  font-size: 50px;
+}
+.checklist {
+  display: flex;
+  flex-direction: column;
+  color: var(--dark-green);
+  min-width: 100%;
+  background: var(--snow);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px var(--snow);
+  text-align: left;
+  overflow: hidden;
+}
+/* .checklist > * {
+    display: block;
+} */
+.checklist-item {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+input[type="checkbox"]:checked + label.strikethrough {
+  text-decoration: line-through;
+  font-weight: normal;
+}
+
+input[type="checkbox"] {
+  width: 40px;
+  height: 40px;
+}
+input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+.input-box {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2opx var(--snow);
+  opacity: 0.7;
+  margin-bottom: 2px;
+}
+.input-box:focus {
+  border: 4px solid var(--light-green);
+  box-shadow: 2px 2px 20px var(--snow);
+}
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.delete-btn {
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: inherit;
+  transition: all 0.2s ease-in-out;
+  background: var(--light-green);
+  color: var(--snow);
+  font-weight: bold;
+  box-shadow: 2px 2px 20px var(--light-green);
+}
+.delete-btn:hover,
+.delete-btn:focus {
+  transform: scale(0.9);
+  cursor: pointer;
+  background: var(--bright-red);
+  box-shadow: 2px 2px 20px var(--bright-red);
+}
