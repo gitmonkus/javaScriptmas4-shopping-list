@@ -42,20 +42,20 @@ body {
   border-radius: 5px;
   box-shadow: 2px 2px 20px var(--snow);
   text-align: left;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
-/* .checklist > * {
-    display: block;
-} */
+.checklist > * {
+  justify-content: center;
+}
 .checklist-item {
   width: 100%;
-  padding: 10px;
+  /* padding: 10px; */
   text-align: left;
   font-weight: bold;
   font-size: 25px;
 }
 
-input[type="checkbox"]:checked + label.strikethrough {
+input[type="checkbox"]:checked + label {
   text-decoration: line-through;
   font-weight: normal;
 }
